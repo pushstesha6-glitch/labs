@@ -1,6 +1,6 @@
 import datetime
 
-# 1. Твой декоратор (оставляем как есть)
+
 def log_calls(filename):
     def decorator(func):
         def wrapper(*args, **kwargs):
@@ -12,12 +12,10 @@ def log_calls(filename):
     return decorator
 
 
-# 2. ДЕЛАЕМ ПРОВЕРКУ:
-# Создаем функцию и вешаем на нее наш декоратор, указав имя файла "calls.log"
 @log_calls("calls.log")
 def add(a, b):
     return a + b
 
-# Вызываем эту функцию пару раз
+
 add(2, 3)
 add(10, 20)
